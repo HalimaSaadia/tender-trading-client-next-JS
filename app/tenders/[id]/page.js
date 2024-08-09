@@ -1,0 +1,35 @@
+import NewsCard from "@/src/components/NewsCard";
+import { getData } from "@/src/utils/getData";
+import Head from "next/head";
+import logo from "@/public/tti_logo.png"
+
+const page = async ({ params }) => {
+    const data = await getData(`https://tender-server.vercel.app/api/v1/tenders/${params.id}`);
+    
+  return (
+    <div>
+      <title>TTI</title>
+      <meta
+        name="description"
+        content="Tender Trading Inc."
+      />
+
+      <meta property="og:title" content={`Organization Name: ${data.data.organizationName}`} />
+      <meta
+        property="og:description"
+        content={`${data?.data.description.slice(0, 100)} ...`}
+      />
+      <meta property="og:image" content="https://i.postimg.cc/ZqKZ1rmY/tti-logo.png" />
+      <meta
+        property="og:url"
+        content={`https://tander-trading-inc-next.vercel.app/tenders/${params.id}`}
+      />
+       <meta property="og:type" content="website" />
+      <div className="h-screen w-full flex justify-center items-center overflow-hidden bg-gradient-to-r from-[#91aadf] to-white">
+        <NewsCard id={params.id} data={data} redirect={`https://www.tendertradinginc.com/tenders/${params.id}`} />
+      </div>
+    </div>
+  );
+};
+
+export default page;
