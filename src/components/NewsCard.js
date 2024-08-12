@@ -14,7 +14,7 @@ const NewsCard = ({ data, id, redirect }) => {
         height={120}
         width={120}
         className="animate-pulse bg-white rounded-full"
-        src={logo}
+        src={data.data.thumbnail}
         alt="TTI Logo"
       />
     </div>
