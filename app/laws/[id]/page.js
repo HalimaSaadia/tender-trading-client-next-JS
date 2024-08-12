@@ -17,7 +17,7 @@ const page = async ({params}) => {
         property="og:description"
         content={`${data?.data?.laws.slice(0, 100)} ...`}
       />
-      <meta property="og:image" content="https://i.postimg.cc/ZqKZ1rmY/tti-logo.png" />
+      {/* <meta property="og:image" content="https://i.postimg.cc/ZqKZ1rmY/tti-logo.png" /> */}
       <meta property="og:type" content="website" />
       <meta
         property="og:url"

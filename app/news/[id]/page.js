@@ -1,7 +1,4 @@
 import NewsCard from "@/src/components/NewsCard";
-
-
-
 async function getSingleNews(id) {
   const res = await fetch(
     `https://tender-server.vercel.app/api/v1/latestnews/${id}`
@@ -15,8 +12,6 @@ async function getSingleNews(id) {
 
 const page = async ({ params }) => {
   const data = await getSingleNews(params.id);
-
-
   return (
     <div>
        <title>Tender Trading Inc.</title>
