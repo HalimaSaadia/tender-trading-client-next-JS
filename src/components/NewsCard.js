@@ -4,8 +4,9 @@ import { useRouter } from "next/navigation";
 import logo from "@/public/tti_logo.png";
 
 const NewsCard = ({ data, id, redirect }) => {
+  console.log(data.data.thumbnail)
   const router = useRouter();
-  // router.push(redirect);
+  router.push(redirect);
   return (
    
     <div className="">
@@ -13,7 +14,7 @@ const NewsCard = ({ data, id, redirect }) => {
         height={120}
         width={120}
         className="animate-pulse bg-white rounded-full"
-        src={data.data.thumbnail}
+        src={logo}
         alt="TTI Logo"
       />
     </div>

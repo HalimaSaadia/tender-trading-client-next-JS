@@ -2,7 +2,7 @@ import NewsCard from "@/src/components/NewsCard";
 import { getData } from "@/src/utils/getData";
 
 
-async function getSingleNews(id) {
+async function getSingleNews(url) {
   const res = await fetch(
     `https://tender-server.vercel.app/api/v1/services/service-details/${id}`, {
        cache: 'no-store'
@@ -16,14 +16,11 @@ async function getSingleNews(id) {
 }
 
 const page = async ({ params }) => {
-  // const data = await getData(
-  //   `https://tender-server.vercel.app/api/v1/services/service-details/${params.id}`, {
-  //    cache: 'no-store'
-  //   }
-  // )
-  const data = await getSingleNews(params.id);
-console.log(data?.data?.thumbnail)
+  // const res = await fetch(`https://tender-server.vercel.app/api/v1/services/service-details/${params.id}`, { cache: 'no-store'})
+  // const data = await res.json()
+  // console.log(data)
 
+const data = await getSingleNews(params.id)
   return (
     <div>
       <title>Tender Trading Inc</title>
