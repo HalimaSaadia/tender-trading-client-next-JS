@@ -2,7 +2,7 @@ import NewsCard from "@/src/components/NewsCard";
 import { getData } from "@/src/utils/getData";
 
 
-async function getSingleNews(url) {
+async function getSingleNews(id) {
   const res = await fetch(
     `https://tender-server.vercel.app/api/v1/services/service-details/${id}`, {
        cache: 'no-store'
