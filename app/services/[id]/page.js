@@ -16,7 +16,6 @@ console.log(data?.data?.thumbnail)
       <title>Tender Trading Inc</title>
       {/* <meta name="description" content="Tender Trading Inc." /> */}
       <meta name="description" content={`${data?.data?.description.slice(0, 100)}`} />
-      <meta property="og:image" content={data?.data?.thumbnail} />
       <meta property="og:title" content={` ${data?.data?.title}`} />
       <meta
         property="og:description"
@@ -25,12 +24,13 @@ console.log(data?.data?.thumbnail)
           100
         )} ...`}
       />
+        <meta property="og:image" content={data?.data?.thumbnail} />
+<meta property="og:type" content="website" />
 
       <meta
         property="og:url"
         content={`https://tander-trading-inc-next.vercel.app/services/${params.id}`}
       />
-      <meta property="og:type" content="website" />
       <div className="h-screen w-full flex justify-center items-center overflow-hidden bg-gradient-to-r from-[#91aadf] to-white">
         <NewsCard
           id={params.id}
