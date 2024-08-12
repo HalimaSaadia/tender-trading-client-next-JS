@@ -46,7 +46,7 @@ const data = await getSingleNews(params.id)
         <NewsCard
           id={params.id}
           data={data}
-          // redirect={`https://www.tendertradinginc.com/service-details/${params.id}`}
+          redirect={`https://www.tendertradinginc.com/service-details/${params.id}`}
         />
       </div>
     </div>
