@@ -35,7 +35,7 @@ const data = await getSingleNews(params.id)
           100
         )} ...`}
       />
-        <meta property="og:image" content={data?.data?.thumbnail} />
+        <meta property="og:image" content={data.data.thumbnail} />
 <meta property="og:type" content="website" />
 
       <meta
