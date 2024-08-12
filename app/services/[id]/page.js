@@ -2,13 +2,24 @@ import NewsCard from "@/src/components/NewsCard";
 import { getData } from "@/src/utils/getData";
 
 
+async function getSingleNews(id) {
+  const res = await fetch(
+    `https://tender-server.vercel.app/api/v1/services/service-details/${id}`
+  );
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
 
 const page = async ({ params }) => {
-  const data = await getData(
-    `https://tender-server.vercel.app/api/v1/services/service-details/${params.id}`, {
-     cache: 'no-store'
-    }
-  )
+  // const data = await getData(
+  //   `https://tender-server.vercel.app/api/v1/services/service-details/${params.id}`, {
+  //    cache: 'no-store'
+  //   }
+  // )
+  const data = await getSingleNews(params.id);
 console.log(data?.data?.thumbnail)
 
   return (
