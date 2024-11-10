@@ -20,12 +20,12 @@ const page = async ({ params }) => {
         content={`${data?.data?.description.slice(0, 100)} ...`}
       />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <meta property="og:title" content={data.data.headline} />
+      <meta property="og:title" content={data?.data?.headline} />
       <meta
         property="og:description"
         content={`${data?.data?.description.slice(0, 100)} ...`}
       />
-      <meta property="og:image" content={data.data.thumbnail} />
+      <meta property="og:image" content={data?.data?.thumbnail} />
       <meta property="og:type" content="website" />
       <meta
         property="og:url"
