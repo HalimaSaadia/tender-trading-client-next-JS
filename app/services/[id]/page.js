@@ -25,6 +25,7 @@ const page = async ({ params }) => {
     <div>
       <title>Tender Trading Inc</title>
       {/* <meta name="description" content="Tender Trading Inc." /> */}
+      {/* commented */}
       <meta
         name="description"
         content={`${data?.data?.description.slice(0, 100)}`}
