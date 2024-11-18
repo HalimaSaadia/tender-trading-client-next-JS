@@ -1,7 +1,7 @@
 import NewsCard from "@/src/components/NewsCard";
 async function getSingleNews(id) {
   const res = await fetch(
-    `https://tender-server.vercel.app/api/v1/latestnews/${id}`
+    `https://tender-trading-server.vercel.app/api/v1/latestnews/${id}`
   );
   if (!res.ok) {
     throw new Error("Failed to fetch data");

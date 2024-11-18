@@ -3,6 +3,7 @@ import Link from "next/link";
 
 const page = async () => {
   const data = await getData(`https://tender-server.vercel.app/api/v1/laws`);
+\
 
   return (
     <div>

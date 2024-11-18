@@ -3,7 +3,7 @@ import { getData } from "@/src/utils/getData";
 
 const page = async ({ params }) => {
   const data = await getData(
-    `https://tender-server.vercel.app/api/v1/tenders/${params?.id}`
+    `https://tender-trading-server.vercel.app/api/v1/tenders/${params?.id}`
   );
 
   return (
